@@ -6,31 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Kodchasan&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="wrapper">
         <header>
-            <h1>Prognoza pogody</h1>
+            <h1 class="title">Jaka jest pogoda?</h1>
         </header>
         <div class="search__field">
-            <form>
+            <form class="search__field__form">
             <input class="search-input" type="text" placeholder="Lokalizacja...">
-            <button type="button">Szukaj</button>
+            <button class="checkButton" type="button">Sprawdź!</button>
             </form>
         </div>
-        <div class="options_degrees">
-            <label for="degrees">Stopnie:</label>
+        <div class="options__degrees">
             <select name="degrees" id="degrees">
-                <option value="metric" selected disabled>Wybierz</option>
+                <option value="metric" selected disabled>Wybierz stopnie...</option>
                 <option value="metric">Celsjusz</option>
                 <option value="K">Kelwin</option>
                 <option value="F">Fahrenheit</option>
             </select>
         </div>
         <div class="how__much__forecast">
-            <label for="forecasts">Ilość prognoz:</label>
             <select name="forecasts" id="forecasts">
-                <option value="5" disabled selected>Wybierz</option>
+                <option value="5" disabled selected>Wybierz ilość prognoz...</option>
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>
@@ -47,7 +46,11 @@
             </div>
         </div>
     </div>
-    <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    <footer>
+    <div>
+        <p>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p> 
+    </div>
+    </footer>
     <script src="main.js" type="text/javascript"></script>
 </body>
 </html>

@@ -16,13 +16,13 @@ window.onload = function () {
     
         if(cityName !== '' && cityName !== undefined){
         getData(url, degree);
-        input.value = ''; // reset wartości inputa
+        input.value = '';
         }else{
             console.log('Wpisz nazwę miasta');
-            console.log('Error!' + url); // bledny url
-            input.value = ''; // reset wartości inputa
+            console.log('Error!' + url); // wrong url
+            input.value = ''; // input reset
         }
-        console.log('Good!!!' + url) // poprawny url
+        console.log('Good!!!' + url) // correct url
     }
     
     function checkForecast(dataFromServer, degree){
@@ -35,34 +35,34 @@ window.onload = function () {
         }
         for(let index = 0; index<dataFromServer.cnt; index++){
             let iconDiv = document.createElement('div');
-            iconDiv.setAttribute('class', 'testFlex');
+            let icon = document.createElement('img');
             let forecastInfo = document.createElement('div');
-            // forecastInfo.setAttribute('class', 'testFlex');
+            forecastInfo.setAttribute('class', 'forecastInfo');
             let forecastText = document.createElement('div');
             let pInfo = document.createElement('p');
             pInfo.setAttribute('class', 'forecastRow pInfo');
             let p = document.createElement('p');
-            let icon = document.createElement('img');
+            p.setAttribute('class', 'forecastDescription');
             icon.setAttribute('src', 'assets/img/' + dataFromServer.list[index].weather[0].icon + '.png');
-            p.setAttribute('class', 'test');
+           
             pInfo.innerHTML = 'Data i godzina: ' + dataFromServer.list[index].dt_txt;
             p.innerHTML = '<span>Temperatura: </span>' + dataFromServer.list[index].main.temp + ' ' + format +'<br>' +
                         '<span>Ciśnienie:</span>' + dataFromServer.list[index].main.pressure + ' hPa<br>' + 
                         '<span>Wilgotność: </span>' + dataFromServer.list[index].main.humidity + '%' + '<br>' +
                         '<span>Opis: </span>' + dataFromServer.list[index].weather[0].description;
             if(index == 0){
-                debugger;
                 forecastInfo.setAttribute('class', 'pierwsza');
-                forecastInfo.appendChild(iconDiv);
                 forecastText.appendChild(pInfo);
-                pInfo.setAttribute('class', 'pierwsza');
                 forecastInfo.appendChild(forecastText);
+                forecastInfo.appendChild(iconDiv);
                 pInfo.appendChild(p);
                 iconDiv.appendChild(icon);
                 results.appendChild(forecastInfo);
             }
-            pInfo.appendChild(p);
-            results.appendChild(pInfo);
+            forecastText.appendChild(pInfo);
+            forecastText.appendChild(p);
+            forecastInfo.appendChild(forecastText);
+            results.appendChild(forecastInfo);
         }
     }
     

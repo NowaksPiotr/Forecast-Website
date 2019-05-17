@@ -1,18 +1,37 @@
+html{
+    font-family: 'Kodchasan', sans-serif;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, #80d1f7, white);
+}
+body{
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    text-align: center;
+    padding: 0.5em;
+    border: 10px solid black;
+    border-radius: 2em;
+    box-sizing: border-box;
+}
+
 .choosen__results{
     display: flex;
-    flex: 1 200px;
+    flex: 1;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .forecastRow{
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    border: 1px solid green;
     margin: 10px;
     padding: 10px;
 }
@@ -20,7 +39,14 @@
 .pInfo{
     font-weight: bold;
 }
-
+.iconDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
 img{
     width: 10em;
     height: 10em;
@@ -33,27 +59,29 @@ form{
 }
 
 .pierwsza{
+    margin-bottom: 1em;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     width: 100%;
     color: darkblue;
-    background: lightblue;
     text-align: center;
 }
-
 .forecastInfo{
-    border: 2px dashed blue;
+    width: 330px;
+    border: 1px solid black;
+    border-radius: 1em;
 }
-
-
+.forecastInfo:hover{
+    background-color:lightgreen;
+    transition: 0.9s;
+}
 
 /* --------- Tekst ----------- */
 .forecastDescription{
     text-align: center;
     font-weight: normal;
     color: red;
-    border: 1px solid green;
 }
 
 span{

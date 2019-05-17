@@ -34,7 +34,7 @@ form{
 
 .pierwsza{
     display: flex;
-    flex-direction: row-revese;
+    flex-direction: row-reverse;
     justify-content: space-around;
     width: 100%;
     color: darkblue;

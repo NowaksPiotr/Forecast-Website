@@ -12,12 +12,16 @@ header{
     justify-content: center;
 }
 
+header, .forecast__for{
+    display: flex;
+    justify-content: center;
+}
+
 .title{
     text-align: center;
     padding: 0.5em;
     border: 0.4rem solid black;
     border-radius: 2em;
-    box-sizing: border-box;
 }
 .search__field{
     display: flex;
@@ -42,6 +46,13 @@ header{
     justify-content: center;
     margin: 0.5em 0;
 }
+
+.forecast__for{
+    width: 100%;
+    font-weight: bold;
+    font-size: 2em;
+}
+
 .choosen__results{
     display: flex;
     flex: 1;

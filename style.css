@@ -34,28 +34,26 @@ form{
 
 .pierwsza{
     display: flex;
-    flex-direction: column;
+    flex-direction: row-revese;
+    justify-content: space-around;
     width: 100%;
     color: darkblue;
-    background: lightcoral;
+    background: lightblue;
     text-align: center;
 }
 
-.testFlex{
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border: 1px solid black;
+.forecastInfo{
+    border: 2px dashed blue;
 }
 
 
 
 /* --------- Tekst ----------- */
-.test{
+.forecastDescription{
+    text-align: center;
     font-weight: normal;
     color: red;
+    border: 1px solid green;
 }
 
 span{

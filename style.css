@@ -1,0 +1,63 @@
+.choosen__results{
+    display: flex;
+    flex: 1 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.forecastRow{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid green;
+    margin: 10px;
+    padding: 10px;
+}
+
+.pInfo{
+    font-weight: bold;
+}
+
+img{
+    width: 10em;
+    height: 10em;
+}
+.options_degrees, .how__much__forecast{
+    display: inline;
+}
+form{
+    padding: 5px;
+}
+
+.pierwsza{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: darkblue;
+    background: lightcoral;
+    text-align: center;
+}
+
+.testFlex{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+
+
+
+/* --------- Tekst ----------- */
+.test{
+    font-weight: normal;
+    color: red;
+}
+
+span{
+    color: green;
+}

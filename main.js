@@ -35,6 +35,7 @@ window.onload = function () {
         }
         for(let index = 0; index<dataFromServer.cnt; index++){
             let iconDiv = document.createElement('div');
+            iconDiv.setAttribute('class', 'iconDiv');
             let icon = document.createElement('img');
             let forecastInfo = document.createElement('div');
             forecastInfo.setAttribute('class', 'forecastInfo');

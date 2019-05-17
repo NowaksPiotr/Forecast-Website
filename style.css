@@ -2,22 +2,46 @@ html{
     font-family: 'Kodchasan', sans-serif;
     height: 100%;
     background-attachment: fixed;
-    background-image: linear-gradient(to top, #80d1f7, white);
+    background-image: linear-gradient(to top, rgb(128,209,247),rgb(255,255,255) );
 }
 body{
 }
+
 header{
     display: flex;
     justify-content: center;
 }
+
 .title{
     text-align: center;
     padding: 0.5em;
-    border: 10px solid black;
+    border: 0.4rem solid black;
     border-radius: 2em;
     box-sizing: border-box;
 }
+.search__field{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.search__field__form{
+    padding: 0.3em;
+}
+
+.checkButton{
+    border: 0.2em solid rgb(180, 180, 255);
+    border-radius: 1em;
+    background-color: transparent;
+}
+.checkButton:active{
+    border: 0.2em solid blue;
+}
+.options__degrees, .how__much__forecast{
+    display: flex;
+    justify-content: center;
+    margin: 0.5em 0;
+}
 .choosen__results{
     display: flex;
     flex: 1;
@@ -39,6 +63,7 @@ header{
 .pInfo{
     font-weight: bold;
 }
+
 .iconDiv{
     display: flex;
     justify-content: center;
@@ -47,33 +72,30 @@ header{
     border: 1px solid transparent;
     border-radius: 50%;
 }
+
 img{
     width: 10em;
     height: 10em;
-}
-.options_degrees, .how__much__forecast{
-    display: inline;
-}
-form{
-    padding: 5px;
 }
 
 .pierwsza{
     margin-bottom: 1em;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     color: darkblue;
     text-align: center;
 }
+
 .forecastInfo{
     width: 330px;
     border: 1px solid black;
     border-radius: 1em;
 }
+
 .forecastInfo:hover{
-    background-color:lightgreen;
+    background-color: lightgray;
     transition: 0.9s;
 }
 

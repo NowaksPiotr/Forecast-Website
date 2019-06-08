@@ -11,7 +11,7 @@ window.onload = function () {
         }
         var degree = document.querySelector('#degrees').value ? document.querySelector('#degrees').value : 'metric'; // wybrane stopnie C K lub F
         var forecasts = document.querySelector('#forecasts').value ? document.querySelector('#forecasts').value : 5// wybrana ilość prognoz, jeśli nic nie jest wybrane to i tak bierze 5
-        var url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName..replace(/\s/g, "") + '&lang=pl&cnt=' + forecasts + '&units='
+        var url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName.replace(/\s/g, "") + '&lang=pl&cnt=' + forecasts + '&units='
         + degree + '&appid=' + key;
     
         if(cityName !== '' && cityName !== undefined){

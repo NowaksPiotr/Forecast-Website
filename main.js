@@ -5,13 +5,13 @@ window.onload = function () {
     console.log(btn);
     var input = document.querySelector('input'); // do kasowania wartości w input-search
     btn.onclick = function(){
-        var cityName = document.querySelector('.search-input').value.trim();// input
+        var cityName = document.querySelector('.search-input').value;// input
         if(cityName === ''){
             cityName = 'Poznań';
         }
         var degree = document.querySelector('#degrees').value ? document.querySelector('#degrees').value : 'metric'; // wybrane stopnie C K lub F
         var forecasts = document.querySelector('#forecasts').value ? document.querySelector('#forecasts').value : 5// wybrana ilość prognoz, jeśli nic nie jest wybrane to i tak bierze 5
-        var url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&lang=pl&cnt=' + forecasts + '&units='
+        var url = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName..replace(/\s/g, "") + '&lang=pl&cnt=' + forecasts + '&units='
         + degree + '&appid=' + key;
     
         if(cityName !== '' && cityName !== undefined){

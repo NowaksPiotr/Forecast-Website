@@ -5,7 +5,7 @@ window.onload = function () {
     console.log(btn);
     var input = document.querySelector('input'); // do kasowania wartości w input-search
     btn.onclick = function(){
-        var cityName = document.querySelector('.search-input').value;// input
+        var cityName = document.querySelector('.search-input').value.trim();// input
         if(cityName === ''){
             cityName = 'Poznań';
         }
